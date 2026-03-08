@@ -77,7 +77,7 @@ def main():
     fs = 500
     t = np.linspace(0,1,fs, endpoint=False)
 
-    signal = generate_signal(t,5,20)
+    signal = generate_signal(t,5,8)
 
     noisy_signal,_ = add_noise(signal,0.5)
 
@@ -88,13 +88,11 @@ def main():
     _,fft_filtered = compute_fft(filtered_signal,fs)
 
     # SNR hesapla
-    # filtre öncesi gürültü
-    noise_before = noisy_signal - signal
-    snr_before = calculate_snr(signal, noise_before)
+    noise = noisy_signal - signal
+    snr_before = calculate_snr(signal, noise)
 
-    # filtre sonrası gürültü
-    noise_after = noisy_signal - filtered_signal
-    snr_after = calculate_snr(filtered_signal, noise_after)
+    noise_after = filtered_signal - signal
+    snr_after = calculate_snr(signal, noise_after)
 
     plot_results(t, signal, noisy_signal, freq, fft_vals, fft_filtered, snr_before, snr_after)
 
