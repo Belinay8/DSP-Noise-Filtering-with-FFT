@@ -65,7 +65,8 @@ Program sentetik bir sinyal üretir, bu sinyale Gaussian gürültü ekler, FFT k
 
 # Example Output / Örnek Çıktı
 
-<img width="1349" height="868" alt="output_proje3" src="https://github.com/user-attachments/assets/4d25649b-8d60-4405-9b71-d0a4212237c2" />
+<img width="1349" height="868" alt="output_proje3" src="https://github.com/user-attachments/assets/0bba9e3a-54c4-4cac-b351-790252d49866" />
+
 
 The program visualizes the following:
 
