@@ -1,8 +1,3 @@
-#1️⃣ sinyal oluştur
-#2️⃣ gürültü ekle
-#3️⃣ FFT ile frekansları gör
-#4️⃣ DSP filtresi ile gürültüyü temizle
-
 import numpy as np        # matematik işlemleri ve sinyal üretmek için
 import matplotlib.pyplot as plt        # grafik çizme
 from scipy.signal import butter, filtfilt    # dijital filtre oluşturmak için
