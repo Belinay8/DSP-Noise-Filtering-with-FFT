@@ -88,11 +88,13 @@ def main():
     _,fft_filtered = compute_fft(filtered_signal,fs)
 
     # SNR hesapla
-    noise = noisy_signal - signal
-    snr_before = calculate_snr(signal, noise)
+    # filtre öncesi gürültü
+    noise_before = noisy_signal - signal
+    snr_before = calculate_snr(signal, noise_before)
 
-    noise_after = filtered_signal - signal
-    snr_after = calculate_snr(signal, noise_after)
+    # filtre sonrası gürültü
+    noise_after = noisy_signal - filtered_signal
+    snr_after = calculate_snr(filtered_signal, noise_after)
 
     plot_results(t, signal, noisy_signal, freq, fft_vals, fft_filtered, snr_before, snr_after)
 
