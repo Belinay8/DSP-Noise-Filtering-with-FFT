@@ -77,4 +77,10 @@ Program aşağıdaki grafikleri görselleştirir:
 - FFT After Filtering (Filtre Sonrası FFT)
 - SNR Before and After Filtering (Filtreleme Öncesi ve Sonrası SNR)
 
+## Note
 
+The low-pass filter removes high-frequency noise but also attenuates the 20 Hz signal component.  
+Because of this, the calculated SNR after filtering may appear lower than before filtering.
+
+Not: Düşük geçiren filtre yüksek frekanslı gürültüyü azaltırken 20 Hz sinyal bileşenini de bastırabilir.  
+Bu nedenle filtreleme sonrası hesaplanan SNR değeri bazen filtreleme öncesinden daha düşük görünebilir.
